@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+
+spawn amplify init
+
+expect "Enter a name for the project"
+send -- "landing\r"
+expect "(Y/n)"
+send -- "y\r"
+expect "AWS profile"
+send -- "\r"
+expect "Please choose the profile you want to use"
+send -- "\r"
+
+interact
