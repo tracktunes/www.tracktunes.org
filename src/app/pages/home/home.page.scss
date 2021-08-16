@@ -1,3 +1,17 @@
-.background-image{
-    --background: url(../../../assets/image/tracktunes-logo.png) no-repeat center;
+.background-image {
+    --background: url(../../../assets/image/tracktunes-logo.png)
+                     no-repeat center;
+}
+
+ion-button {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+ion-button.sign-up {
+    margin-top: 160px;
+}
+
+ion-button.learn-more {
+    margin-top: 16px;
 }
