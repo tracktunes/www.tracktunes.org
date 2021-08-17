@@ -8,18 +8,25 @@ const routes: Routes = [
             .then( m => m.HomePageModule)
     },
     {
+        path: 'sign-up',
+        loadChildren: () => import('./pages/sign-up/sign-up.module')
+            .then( m => m.SignUpPageModule)
+    },
+    {
+        path: 'learn-more',
+        loadChildren: () => import('./pages/learn-more/learn-more.module')
+            .then( m => m.LearnMorePageModule)
+    },
+    {
+        path: 'thank-you',
+        loadChildren: () => import('./pages/thank-you/thank-you.module')
+            .then( m => m.ThankYouPageModule)
+    },
+    {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
-    },
-  {
-    path: 'thank-you',
-    loadChildren: () => import('./pages/thank-you/thank-you.module').then( m => m.ThankYouPageModule)
-  },
-  {
-    path: 'sign-up',
-    loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
-  },
+    }
 ];
 
 @NgModule({
