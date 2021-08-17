@@ -3,15 +3,24 @@
                      no-repeat center;
 }
 
+h1 {
+    font-weight: 900;
+}
+
 ion-button {
     font-weight: 900;
     font-size: 1.2em;
 }
 
-ion-button.sign-up {
-    margin-top: 160px;
+@media (max-width: 576px) {
+    ion-toolbar.sign-up {
+        margin-top: 178px;
+    }
 }
 
-ion-button.learn-more {
-    margin-top: 16px;
+
+@media (min-width: 576px) {
+    ion-toolbar.sign-up {
+        margin-top: 78px;
+    }
 }
