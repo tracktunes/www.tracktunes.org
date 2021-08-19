@@ -24,11 +24,15 @@ npm-debug.log*
 /.versions
 /.vscode
 /coverage
-/dist
-/node_modules
 /platforms
 /plugins
 /www
+
+*.bak
+.\#*
+*~
+\#*\#
+OLD/
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
