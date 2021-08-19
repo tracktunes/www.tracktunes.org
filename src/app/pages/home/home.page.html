@@ -1,15 +1,20 @@
 <ion-content [fullscreen]="true" scrollY="false"
-             class="background-image ion-padding ion-text-center">
-    <h1>The Tracktunes App</h1>
-    <h2>Create and share music with others worldwide</h2>
-    <ion-toolbar class="sign-up">
-        <ion-button href="sign-up" color="success">
-            Sign Up for Early Access 
-        </ion-button>
-    </ion-toolbar>
-    <ion-toolbar>
-        <ion-button href="learn-more" color="success" fill="outline">
-            Learn More
-        </ion-button>
-    </ion-toolbar>
+             class="background ion-padding ion-text-center">
+    <ion-col>
+        <h1><strong>The Tracktunes App</strong></h1>
+        <h2>Create and share music with others worldwide</h2>
+        <ion-img src="assets/image/tracktunes-logo.png"></ion-img>
+        <ion-input type="email" placeholder="Email Address">
+        </ion-input>
+        <ion-toolbar>
+            <ion-button color="success" (click)="onClickSignUp()">
+                Sign Up for Early Access 
+            </ion-button>
+        </ion-toolbar>
+        <ion-toolbar>
+            <ion-button href="learn-more" size="small" fill="outline">
+                Learn More
+            </ion-button>
+        </ion-toolbar>
+    </ion-col>
 </ion-content>

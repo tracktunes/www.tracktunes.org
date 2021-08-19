@@ -9,12 +9,14 @@ ion-img {
 
 ion-input {
     --background: #dbdbdb;
-        width: 100%;
+    width: 100%;
+    max-width: 400;
     margin: 0 auto;
 }
 
 ion-button {
     width: 100%;
+    max-width: 400;
     font-weight: 900;
     font-size: 1.2em;
 }

@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
     styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+    public bClickedSignUp: boolean = false;
+    
     constructor() {}
 
+    public onClickSignUp(): void {
+        this.bClickedSignUp = true;
+    }
 }
