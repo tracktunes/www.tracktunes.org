@@ -1,4 +1,11 @@
 ion-content {
     background-color: var(--global-background-color);
     --background: var(--global-background-color);
+    h1, h2 {
+        color: var(--ion-color-light);
+        max-width: var(--global-max-width);
+        margin: 0 auto;
+    }
+
 }
+
