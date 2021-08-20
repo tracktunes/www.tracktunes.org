@@ -1,11 +1,16 @@
 $max-width: 380px;
 $bg-color: #111536;
+$margin: 14px;
 
 ion-content {
     background-color: $bg-color;
     --background: $bg-color;
     h1, h2 {
         color: var(--ion-color-light);
+        max-width: $max-width;
+        margin: 0 auto;
+        margin-top: $margin;
+        margin-bottom: $margin;
     }
     p {
         color: var(--ion-color-medium);
@@ -14,16 +19,16 @@ ion-content {
     }
     ion-img {
         height: 80px;
-        margin-top: 14px;
-        margin-bottom: 14px;
+        margin-top: $margin;
+        margin-bottom: $margin;
     }
     ion-input {
         --background: #dbdbdb;
         color: black;
         max-width: $max-width;
+        line-height: 2.1em;
         margin: 0 auto;
-        margin-top: 18px;
-        line-height: 2.2em;
+        margin-top: $margin;
     }
     ion-button.sign-up {
         height: 2.8em;
@@ -33,9 +38,9 @@ ion-content {
         display: block;
         max-width: $max-width;
         margin: 0 auto;
-        margin-bottom: 15px;
+        margin-bottom: $margin;
     }
     ion-button.learn-more {
-        margin-bottom: 14px;
+        margin-bottom: $margin;
     }
 }
