@@ -1,5 +1,16 @@
-ion-content, ion-toolbar {
-    --background: var(--global-background-color);
+$max-width: 500px;
+$bg-color: #111536;
+
+ion-content {
+    // --background: var(--global-background-color);
+    background-color: $bg-color;
+    --background: $bg-color;
+    h1, h2 {
+        color: var(--ion-color-light);
+    }
+    p {
+        color: var(--ion-color-medium);
+    }
 }
 
 ion-img {
@@ -9,26 +20,36 @@ ion-img {
 
 ion-input {
     --background: #dbdbdb;
-    width: 100%;
-    max-width: 400;
+    color: black;
+    max-width: $max-width;
+    // border-radius: 8px;
     margin: 0 auto;
+    line-height: 2.2em;
 }
 
-ion-button {
-    width: 100%;
-    max-width: 400;
+ion-button.sign-up {
+    height: 2.8em;
     font-weight: 900;
     font-size: 1.2em;
+    --border-radius: 0;
+    display: block;
+    max-width: $max-width;
+    margin: 0 auto;
+    margin-bottom: 8px;
 }
 
+/*
 @media (max-width: 576px) {
-    ion-toolbar.sign-up {
+    // ion-toolbar.sign-up {
+    ion-input {
         margin-top: 170px;
     }
 }
 
 @media (min-width: 576px) {
-    ion-toolbar.sign-up {
+    // ion-toolbar.sign-up {
+    ion-input {
         margin-top: 78px;
     }
 }
+*/
