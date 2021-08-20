@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HomePage {
     public bShowLearnMore: boolean = false;
     
-    constructor(private router: Router) {}
+    constructor(private router: Router) { }
 
     public onClickSignUp(): void {
         this.router.navigate([ 'thank-you' ]);
