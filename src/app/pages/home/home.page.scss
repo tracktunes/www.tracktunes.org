@@ -1,4 +1,4 @@
-$max-width: 500px;
+$max-width: 380px;
 $bg-color: #111536;
 
 ion-content {
@@ -24,6 +24,7 @@ ion-input {
     max-width: $max-width;
     // border-radius: 8px;
     margin: 0 auto;
+    margin-top: 18px;
     line-height: 2.2em;
 }
 
@@ -35,7 +36,7 @@ ion-button.sign-up {
     display: block;
     max-width: $max-width;
     margin: 0 auto;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 /*
