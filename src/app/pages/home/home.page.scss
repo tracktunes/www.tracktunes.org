@@ -12,13 +12,11 @@ ion-content {
         max-width: $max-width;
         margin: 0 auto;
     }
-
     ion-img {
         height: 80px;
         margin-top: 14px;
         margin-bottom: 14px;
     }
-
     ion-input {
         --background: #dbdbdb;
         color: black;
@@ -27,7 +25,6 @@ ion-content {
         margin-top: 18px;
         line-height: 2.2em;
     }
-
     ion-button.sign-up {
         height: 2.8em;
         font-weight: 900;
@@ -38,9 +35,7 @@ ion-content {
         margin: 0 auto;
         margin-bottom: 15px;
     }
-
     ion-button.learn-more {
         margin-bottom: 14px;
     }
-
 }
