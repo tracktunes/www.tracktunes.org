@@ -15,6 +15,18 @@
  */
 
 /***************************************************************************************************
+ * AMPLIFY POLYFILLS
+ * See: https://docs.amplify.aws/start/getting-started/setup/q/..
+ *      ..integration/angular#create-a-new-angular-app
+ */
+(window as any).global = window;
+(window as any).process = { env: { DEBUG: undefined } }; // eslint-disable-line
+
+// IE11 AMPLIFY POLYFILL
+import 'core-js/es/typed-array';
+import 'core-js/es/object';
+
+/***************************************************************************************************
  * BROWSER POLYFILLS
  */
 

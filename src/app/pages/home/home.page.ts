@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from 'aws-amplify';
-// import { verifier } from 'email-verify';
-// import { dns } from 'dns';
 
 const EMAIL_REG_EXP: RegExp =
       /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
@@ -27,6 +25,15 @@ export class HomePage {
               this.email[0] === '.' || this.email[len-1] === '.')) {
             bValid = EMAIL_REG_EXP.test(this.email);
         }
+        if (bValid) {
+            const email: string = 'funkjimi@gmail.com';
+            Auth.signUp({
+                username: email,
+                password: 'harofe46X;',
+                attributes: { email }
+            }).then(res => { console.warn(res); });
+        }
+
         /*
         if (bValid) {
             verifier.verify(this.email, (err, info) => {
