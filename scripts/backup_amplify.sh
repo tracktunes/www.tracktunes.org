@@ -19,8 +19,6 @@ fi
 
 BACKUP_DIR="$BACKUP_PARENT/amplify/`date +%F`"
 
-echo "BACKUP DIR: $BACKUP_DIR"
-
 if [ -e amplify ]; then
     if [ -e "$BACKUP_DIR" ]; then
         >&2 echo "Backup directory exists (not backing up): $BACKUP_DIR"
@@ -30,4 +28,3 @@ if [ -e amplify ]; then
         cp -fr amplify/* $BACKUP_DIR
     fi
 fi
-echo $BACKUP_DIR
