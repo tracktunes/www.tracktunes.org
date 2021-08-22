@@ -6,9 +6,5 @@ spawn amplify push
 
 expect "Are you sure you want to continue?"
 send -- "\r"
-expect "Do you want to update code for your updated GraphQL API"
-send -- "\r"
-expect "This will overwrite your current graphql queries, mutations and *"
-send -- "\r"
 
 interact

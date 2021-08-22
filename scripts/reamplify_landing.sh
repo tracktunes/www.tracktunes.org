@@ -12,7 +12,9 @@ $MY_DIR/amplify_init.exp
 
 $MY_DIR/amplify_add_auth.exp
 
-$MY_DIR/amplifyd_auth_update.exp
+$MY_DIR/amplify_auth_update.exp
+
+$MY_DIR/amplify_push.exp
 
 amplify status
 
