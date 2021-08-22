@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "landing9fd834f9_identitypool_9fd834f9",
+    "identityPoolName": "landing4e72ea6c_identitypool_4e72ea6c",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "landin9fd834f9",
-    "userPoolName": "landing9fd834f9_userpool_9fd834f9",
+    "resourceNameTruncated": "landin4e72ea6c",
+    "userPoolName": "landing4e72ea6c_userpool_4e72ea6c",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "landin9fd834f9_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "landin4e72ea6c_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "9fd834f9",
-    "resourceName": "landing9fd834f9",
+    "sharedId": "4e72ea6c",
+    "resourceName": "landing4e72ea6c",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -55,7 +55,7 @@
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "landing9fd834f9PreSignup",
+            "resourceName": "landing4e72ea6cPreSignup",
             "triggerProvider": "Cognito",
             "attributes": [
                 "Arn",
@@ -71,7 +71,7 @@
     "parentStack": {
         "Ref": "AWS::StackId"
     },
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PreSignUp\",\n    \"lambdaFunctionName\": \"landing9fd834f9PreSignup\"\n  }\n]",
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PreSignUp\",\n    \"lambdaFunctionName\": \"landing4e72ea6cPreSignup\"\n  }\n]",
     "breakCircularDependency": true,
     "permissions": [],
     "authProviders": []

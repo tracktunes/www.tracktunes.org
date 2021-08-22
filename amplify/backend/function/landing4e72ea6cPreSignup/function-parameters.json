@@ -3,15 +3,15 @@
   "modules": [
     "custom"
   ],
-  "parentResource": "landing9fd834f9",
-  "functionName": "landing9fd834f9PreSignup",
-  "resourceName": "landing9fd834f9PreSignup",
+  "parentResource": "landing4e72ea6c",
+  "functionName": "landing4e72ea6cPreSignup",
+  "resourceName": "landing4e72ea6cPreSignup",
   "parentStack": "auth",
   "triggerEnvs": [],
   "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/triggers/PreSignup",
   "triggerTemplate": "PreSignup.json.ejs",
   "triggerEventPath": "PreSignup.event.json",
-  "roleName": "landing9fd834f9PreSignup",
+  "roleName": "landing4e72ea6cPreSignup",
   "skipEdit": true,
   "enableCors": false
 }
