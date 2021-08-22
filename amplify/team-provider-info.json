@@ -10,6 +10,11 @@
       "StackName": "amplify-landing-dev-231327",
       "StackId": "arn:aws:cloudformation:us-east-1:957560195052:stack/amplify-landing-dev-231327/ec664b20-02f6-11ec-9943-0edd85921ccb",
       "AmplifyAppId": "d10loys939yzfd"
+    },
+    "categories": {
+      "auth": {
+        "landinge9215dfe": {}
+      }
     }
   }
 }
