@@ -1,26 +1,10 @@
 {
-  "auth": {
-    "landingc18a61c8": {
-      "service": "Cognito",
+  "auth": {},
+  "function": {
+    "landing2ceedb6aPreSignup": {
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false,
-      "frontendAuthConfig": {
-        "loginMechanism": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ]
-      }
+      "service": "Lambda"
     }
   }
 }
