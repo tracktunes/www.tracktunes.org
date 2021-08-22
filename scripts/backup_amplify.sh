@@ -19,11 +19,12 @@ fi
 
 BACKUP_DIR="$BACKUP_PARENT/amplify/`date +%F`"
 
+echo "BACKUP DIR: $BACKUP_DIR"
+
 if [ -e amplify ]; then
-    cp amplify/backend/api/tracktunes/schema.graphql .
     if [ -e "$BACKUP_DIR" ]; then
         >&2 echo "Backup directory exists (not backing up): $BACKUP_DIR"
-    else 
+    else
         >&2 echo "Backing up amplify in: $BACKUP_DIR"
         mkdir $BACKUP_DIR
         cp -fr amplify/* $BACKUP_DIR
