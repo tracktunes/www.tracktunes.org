@@ -9,22 +9,22 @@ if [ "$BACKUP_DIR" == "" ]; then
     exit 1
 fi
 
-# $MY_DIR/backup_amplify.sh
+$MY_DIR/backup_amplify.sh
 
-# $MY_DIR/amplify_delete.exp
+$MY_DIR/amplify_delete.exp
 
 echo "Hit enter whenever you are ready to continue!"; read
 
-# $MY_DIR/amplify_init.exp
+$MY_DIR/amplify_init.exp
 
 $MY_DIR/amplify_add_auth.exp
 
 $MY_DIR/amplify_auth_update.exp
 
-# $MY_DIR/amplify_push.exp
+$MY_DIR/rebuild_lambdas.sh $BACKUP_DIR
 
-# $MY_DIR/rebuild_lambdas.sh $BACKUP_DIR
+$MY_DIR/amplify_push.exp
 
-# amplify status
+amplify status
 
-# echo "Amplify CLI version: `amplify --version`"
+echo "Amplify CLI version: `amplify --version`"
