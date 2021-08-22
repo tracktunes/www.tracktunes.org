@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "landinge9215dfe_identitypool_e9215dfe",
+    "identityPoolName": "landingc18a61c8_identitypool_c18a61c8",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "landine9215dfe",
-    "userPoolName": "landinge9215dfe_userpool_e9215dfe",
+    "resourceNameTruncated": "landinc18a61c8",
+    "userPoolName": "landingc18a61c8_userpool_c18a61c8",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "landine9215dfe_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "landinc18a61c8_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "e9215dfe",
-    "resourceName": "landinge9215dfe",
+    "sharedId": "c18a61c8",
+    "resourceName": "landingc18a61c8",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -48,31 +48,9 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
+    "useDefault": "default",
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "dependsOn": [
-        {
-            "category": "function",
-            "resourceName": "landinge9215dfePreSignup",
-            "triggerProvider": "Cognito",
-            "attributes": [
-                "Arn",
-                "Name"
-            ]
-        }
-    ],
-    "thirdPartyAuth": false,
-    "userPoolGroups": false,
-    "adminQueries": false,
-    "triggers": "{\n  \"PreSignup\": [\n    \"email-filter-allowlist\",\n    \"email-filter-denylist\",\n    \"custom\"\n  ]\n}",
-    "hostedUI": false,
-    "parentStack": {
-        "Ref": "AWS::StackId"
-    },
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PreSignUp\",\n    \"lambdaFunctionName\": \"landinge9215dfePreSignup\"\n  }\n]",
-    "breakCircularDependency": true,
-    "permissions": [],
-    "authProviders": []
+    "dependsOn": []
 }

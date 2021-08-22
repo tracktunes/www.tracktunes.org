@@ -1,19 +1,9 @@
 {
   "auth": {
-    "landinge9215dfe": {
+    "landingc18a61c8": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "landinge9215dfePreSignup",
-          "triggerProvider": "Cognito",
-          "attributes": [
-            "Arn",
-            "Name"
-          ]
-        }
-      ],
+      "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "loginMechanism": [
@@ -31,13 +21,6 @@
           "SMS"
         ]
       }
-    }
-  },
-  "function": {
-    "landinge9215dfePreSignup": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
     }
   }
 }
