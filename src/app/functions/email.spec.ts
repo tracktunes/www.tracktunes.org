@@ -48,26 +48,26 @@ const INCORRECT_EMAIL_ADDRESSES = [
     'email@-example.com',
 ];
 
-describe('', () => {
+describe('Email', () => {
     it('can validate correct emails', () => {
         CORRECT_EMAIL_ADDRESSES.forEach(email => {
             expect(validateEmail(email, false)).toBeTruthy();
         });
     });
 
-    it('can invalidate incorrect emails', () => {
+    it('can invalidate various incorrect emails', () => {
         INCORRECT_EMAIL_ADDRESSES.forEach(email => {
             expect(validateEmail(email, false)).toBeFalsy();
         });
     });
 
-    it('can invalidate incorrect emails with a non-existing domain', () => {
+    it('can invalidate emails with a non-existing domain', () => {
         INCORRECT_EMAIL_ADDRESSES.forEach(email => {
             expect(validateEmail('test@domain.web', true)).toBeFalsy();
         });
     });
 
-    it('can invalidate incorrect emails with a non-existing tld', () => {
+    it('can invalidate emails with a non-existing tld', () => {
         INCORRECT_EMAIL_ADDRESSES.forEach(email => {
             expect(validateEmail('test@domain.web', false)).toBeFalsy();
         });

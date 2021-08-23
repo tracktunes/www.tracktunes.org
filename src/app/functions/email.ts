@@ -1675,7 +1675,7 @@ const VALID_TLDS: Set<string> = new Set([
   'ZM',
   'ZONE',
   'ZUERICH',
-  'ZW',
+  'ZW'
 ]);
 
 export const validateEmail: (string, boolean) => boolean =
