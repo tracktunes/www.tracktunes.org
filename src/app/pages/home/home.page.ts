@@ -15,12 +15,13 @@ export class HomePage {
     constructor(private router: Router) { }
 
     public onClickSignUp(): void {
-        if (validateEmail(this.email)) {
+        if (validateEmail(this.email, true)) {
+            console.log('valid email');
             Auth.signUp({
-                username: email,
+                username: this.email,
                 password: 'harofe46X;',
-                attributes: { email }
-            }).then(res => { console.warn(res); });
+                attributes: { email: this.email }
+            }).then(res => { console.log(res); });
         }
         // thank all regardless of validity
         this.router.navigate([ 'thank-you' ]);
