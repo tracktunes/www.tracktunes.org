@@ -49,7 +49,6 @@ const INCORRECT_EMAIL_ADDRESSES = [
 ];
 
 describe('', () => {
-
     it('can validate correct emails', () => {
         CORRECT_EMAIL_ADDRESSES.forEach(email => {
             expect(validateEmail(email, false)).toBeTruthy();
@@ -73,5 +72,4 @@ describe('', () => {
             expect(validateEmail('test@domain.web', false)).toBeFalsy();
         });
     });
-
 });

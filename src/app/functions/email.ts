@@ -4,18 +4,18 @@ export const EMAIL_MIN_LEN: number = 8;
 // Regex should be according to RFC 822
 // See http://rumkin.com/software/email/rules.php
 // From http://badsyntax.co/post/javascript-email-validation-rfc822
-// export const EMAIL_REG_EXP: RegExp = /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/; 
+// export const EMAIL_REG_EXP: RegExp = /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/;
 export const EMAIL_REG_EXP: RegExp = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const VALID_DOMAINS: Set<string> = new Set([
-    'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'hotmail.co.uk', 
+    'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'hotmail.co.uk',
     'hotmail.fr', 'msn.com', 'yahoo.fr', 'wanadoo.fr', 'orange.fr',
     'comcast.net', 'yahoo.co.uk', 'yahoo.com.br', 'yahoo.co.in', 'live.com',
     'rediffmail.com', 'free.fr', 'gmx.de', 'web.de', 'yandex.ru', 'ymail.com',
     'libero.it', 'outlook.com', 'uol.com.br', 'bol.com.br', 'mail.ru',
     'cox.net', 'hotmail.it', 'sbcglobal.net', 'sfr.fr', 'live.fr',
     'verizon.net', 'live.co.uk', 'googlemail.com', 'yahoo.es', 'ig.com.br',
-    'live.nl', 'bigpond.com', 'terra.com.br', 'yahoo.it', 'neuf.fr', 
+    'live.nl', 'bigpond.com', 'terra.com.br', 'yahoo.it', 'neuf.fr',
     'yahoo.de', 'alice.it', 'rocketmail.com', 'att.net', 'laposte.net',
     'facebook.com', 'bellsouth.net', 'yahoo.in', 'hotmail.es', 'charter.net',
     'yahoo.ca', 'yahoo.com.au', 'rambler.ru', 'hotmail.de', 'tiscali.it',
@@ -173,7 +173,7 @@ const NON_VALID_DOMAINS: Set<string> = new Set([
     'xagloo.com', 'xemaps.com', 'xents.com', 'xmaily.com', 'xoxy.net',
     'yep.it', 'yogamaven.com', 'yopmail.com', 'yopmail.fr', 'yopmail.net',
     'yourdomain.com', 'yuurok.com', 'z1p.biz', 'za.com', 'zehnminuten.de',
-    'zehnminutenmail.de', 'zippymail.info', 'zoemail.net', 'zomg.info'    
+    'zehnminutenmail.de', 'zippymail.info', 'zoemail.net', 'zomg.info'
 ]);
 
 // from http://data.iana.org/TLD/tlds-alpha-by-domain.txt
@@ -1705,10 +1705,9 @@ export const validateEmail: (string, boolean) => boolean =
                 return false;
             }
         }
-        
+
         const len: number = email.length;
         return EMAIL_REG_EXP.test(email) &&
             !(len > EMAIL_MAX_LEN || len < EMAIL_MIN_LEN ||
               email[0] === '.' || email[len-1] === '.');
-    }
-
+    };
