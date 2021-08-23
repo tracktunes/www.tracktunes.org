@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from 'aws-amplify';
-
-const EMAIL_REG_EXP: RegExp =
-      /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
-const EMAIL_MAX_LEN: number = 255;
-const EMAIL_MIN_LEN: number = 8;
+import { validateEmail } from '../../functions/email';
 
 @Component({
     selector: 'app-home',
@@ -19,39 +15,14 @@ export class HomePage {
     constructor(private router: Router) { }
 
     public onClickSignUp(): void {
-        const len: number = this.email.length;
-        let bValid: boolean = false;
-        if (!(len > EMAIL_MAX_LEN || len < EMAIL_MIN_LEN ||
-              this.email[0] === '.' || this.email[len-1] === '.')) {
-            bValid = EMAIL_REG_EXP.test(this.email);
-        }
-        if (bValid) {
-            const email: string = 'funkjimi@gmail.com';
+        if (validateEmail(this.email)) {
             Auth.signUp({
                 username: email,
                 password: 'harofe46X;',
                 attributes: { email }
             }).then(res => { console.warn(res); });
         }
-
-        /*
-        if (bValid) {
-            verifier.verify(this.email, (err, info) => {
-                if (info.success) {
-                    bValid = true;
-                }
-            });
-        }
-        console.log('email: ' + this.email, bValid);
-        */
-        /*
-        public signUp(email: string, password: string): Promise<ISignUpResult> {
-        return Auth.signUp({
-            username: email,
-            password,
-            attributes: { email }
-        });
-        */
+        // thank all regardless of validity
         this.router.navigate([ 'thank-you' ]);
     }
 

@@ -3,8 +3,8 @@ export const EMAIL_MIN_LEN: number = 8;
 
 // Regex should be according to RFC 822
 // See http://rumkin.com/software/email/rules.php
-// From http://badsyntax.co/post/javascript-email-validation-rfc822
-// export const EMAIL_REG_EXP: RegExp = /^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$/;
+// and http://badsyntax.co/post/javascript-email-validation-rfc822
+// eslint-disable-next-line
 export const EMAIL_REG_EXP: RegExp = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const VALID_DOMAINS: Set<string> = new Set([
@@ -1689,7 +1689,7 @@ export const validateEmail: (string, boolean) => boolean =
             return false;
         }
         const domain: string = parts[1].toLowerCase();
-        // our domains must start with an alphanumeric character
+        // our acceptable domains must start with an alphanumeric character
         if (/[^a-zA-Z0-9]/.test(domain[0])) {
             return false;
         }
