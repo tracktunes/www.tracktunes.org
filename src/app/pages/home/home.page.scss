@@ -1,20 +1,21 @@
 @import "../../../global.scss";
 
 $margin: 14px;
+$maxWidth: 380px;
 
 ion-content {
-    background-color: var(--global-background-color);
-    --background: var(--global-background-color);
+    /* background-color: var(--global-background-color); */
+    --background: black;
     h1, h2 {
         color: var(--ion-color-light);
-        max-width: var(--global-max-width);
+        max-width: $maxWidth;
         margin: 0 auto;
         margin-top: $margin;
         margin-bottom: $margin;
     }
     p {
         color: var(--ion-color-medium);
-        max-width: var(--global-max-width);
+        max-width: $maxWidth;
         margin: 0 auto;
     }
     ion-img {
@@ -25,7 +26,7 @@ ion-content {
     ion-input {
         --background: #dbdbdb;
         color: black;
-        max-width: var(--global-max-width);
+        max-width: $maxWidth;
         line-height: 2.1em;
         margin: 0 auto;
         margin-top: $margin;
@@ -36,7 +37,7 @@ ion-content {
         font-size: 1.2em;
         --border-radius: 0;
         display: block;
-        max-width: var(--global-max-width);
+        max-width: $maxWidth;
         margin: 0 auto;
         margin-bottom: $margin;
     }
