@@ -52,13 +52,13 @@ describe('', () => {
 
     it('can validate correct emails', () => {
         CORRECT_EMAIL_ADDRESSES.forEach(email => {
-            expect(validateEmail(email)).toBeTruthy()
+            expect(validateEmail(email, false)).toBeTruthy()
         });
     });
 
     it('can invalidate incorrect emails', () => {
         INCORRECT_EMAIL_ADDRESSES.forEach(email => {
-            expect(validateEmail(email)).toBeFalsy()
+            expect(validateEmail(email, false)).toBeFalsy()
         });
     });
 
