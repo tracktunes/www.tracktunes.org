@@ -1678,7 +1678,7 @@ const VALID_TLDS: Set<string> = new Set([
   'ZW'
 ]);
 
-export const validateEmail: (string, boolean) => boolean =
+export const validateEmail: (email: string, testDomain: boolean) => boolean =
     (email: string, testDomain: boolean) => {
         // make sure it's all ascii-text
         if (/[^\x00-x7F]/.test(email)) {

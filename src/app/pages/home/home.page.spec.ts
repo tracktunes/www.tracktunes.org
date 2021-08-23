@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
@@ -14,6 +15,7 @@ describe('HomePage', () => {
         TestBed.configureTestingModule({
             declarations: [ HomePage ],
             imports: [
+                FormsModule,
                 IonicModule.forRoot(),
                 RouterTestingModule
             ]

@@ -1,4 +1,4 @@
-import { validateEmail } from './email'
+import { validateEmail } from './email';
 
 const CORRECT_EMAIL_ADDRESSES = [
     'test@example.org',
