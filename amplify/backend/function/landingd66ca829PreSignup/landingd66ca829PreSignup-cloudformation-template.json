@@ -71,12 +71,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "landing59ee0f62PreSignup",
+            "landingd66ca829PreSignup",
             {
               "Fn::Join": [
                 "",
                 [
-                  "landing59ee0f62PreSignup",
+                  "landingd66ca829PreSignup",
                   "-",
                   {
                     "Ref": "env"
@@ -129,12 +129,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "landing59ee0f62PreSignup",
+            "landingd66ca829PreSignup",
             {
               "Fn::Join": [
                 "",
                 [
-                  "landing59ee0f62PreSignup",
+                  "landingd66ca829PreSignup",
                   "-",
                   {
                     "Ref": "env"

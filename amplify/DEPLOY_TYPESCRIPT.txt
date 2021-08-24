@@ -1,0 +1,342 @@
+dtal@thing5: ./scripts/reamplify_landing.sh ~/BACKUPS/www.tracktunes.org/2021-08-15
+Backup directory exists (not backing up): /home/dtal/BACKUPS/www.tracktunes.org/amplify/2021-08-24
+spawn amplify delete
+? Are you sure you want to continue? This CANNOT be undone. (This will delete all the environments of the project from the cloud and wipe out all the local files 
+created by Amplify CLI) Yes
+⠋ Deleting resources from the cloud. This may take a few minutes...
+Deleting env: dev.
+✔ Project deleted in the cloud.
+Project deleted locally.
+Hit enter whenever you are ready to continue!
+
+spawn amplify init
+Note: It is recommended to run this command from the root of your app directory
+? Enter a name for the project landing
+The following configuration will be applied:
+
+Project information
+| Name: landing
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: angular
+| Source Directory Path: src
+| Distribution Directory Path: www
+| Build Command: npm run-script build
+| Start Command: ng serve
+
+? Initialize the project with the above configuration? Yes
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+
+For more information on AWS Profiles, see:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html
+
+? Please choose the profile you want to use default
+Adding backend environment dev to AWS Amplify Console app: d2sudssqz02gnv
+⠧ Initializing project in the cloud...
+
+CREATE_IN_PROGRESS amplify-landing-dev-185206 AWS::CloudFormation::Stack Tue Aug 24 2021 18:52:10 GMT-0400 (Eastern Daylight Time) User Initiated             
+CREATE_IN_PROGRESS UnauthRole                 AWS::IAM::Role             Tue Aug 24 2021 18:52:15 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS DeploymentBucket           AWS::S3::Bucket            Tue Aug 24 2021 18:52:15 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS AuthRole                   AWS::IAM::Role             Tue Aug 24 2021 18:52:15 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UnauthRole                 AWS::IAM::Role             Tue Aug 24 2021 18:52:15 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠏ Initializing project in the cloud...
+
+CREATE_IN_PROGRESS AuthRole         AWS::IAM::Role  Tue Aug 24 2021 18:52:16 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS DeploymentBucket AWS::S3::Bucket Tue Aug 24 2021 18:52:16 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠸ Initializing project in the cloud...
+
+CREATE_COMPLETE UnauthRole AWS::IAM::Role Tue Aug 24 2021 18:52:29 GMT-0400 (Eastern Daylight Time) 
+CREATE_COMPLETE AuthRole   AWS::IAM::Role Tue Aug 24 2021 18:52:30 GMT-0400 (Eastern Daylight Time) 
+⠇ Initializing project in the cloud...
+
+CREATE_COMPLETE DeploymentBucket           AWS::S3::Bucket            Tue Aug 24 2021 18:52:37 GMT-0400 (Eastern Daylight Time) 
+CREATE_COMPLETE amplify-landing-dev-185206 AWS::CloudFormation::Stack Tue Aug 24 2021 18:52:40 GMT-0400 (Eastern Daylight Time) 
+✔ Successfully created initial AWS cloud resources for deployments.
+✔ Initialized provider successfully.
+Initialized your environment successfully.
+
+Your project has been successfully initialized and connected to the cloud!
+
+Some next steps:
+"amplify status" will show you what you've added already and if it's locally configured or deployed
+"amplify add <category>" will allow you to add features like user login or a backend API
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify console" to open the Amplify Console and view your project status
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+Pro tip:
+Try "amplify add api" to create a backend API and then "amplify publish" to deploy everything
+
+spawn amplify add auth
+Using service: Cognito, provided by: awscloudformation
+ 
+ The current configured provider is Amazon Cognito. 
+ 
+ Do you want to use the default authentication and security configuration? Default configuration
+ Warning: you will not be able to edit these selections. 
+ How do you want users to be able to sign in? Email
+ Do you want to configure advanced settings? No, I am done.
+Successfully added auth resource landingd66ca829 locally
+
+Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+spawn amplify auth update
+Please note that certain attributes may not be overwritten if you choose to use defaults settings.
+Using service: Cognito, provided by: awscloudformation
+ What do you want to do? Walkthrough all the auth configurations
+ Select the authentication/authorization services that you want to use: User Sign-Up, Sign-In, connected with AWS IAM controls (Enables per-user Storage features 
+for images or other content, Analytics, and more)
+ Allow unauthenticated logins? (Provides scoped down permissions that you can control via AWS IAM) No
+ Do you want to enable 3rd party authentication providers in your identity pool? No
+ Do you want to add User Pool Groups? No
+ Do you want to add an admin queries API? No
+ Multifactor authentication (MFA) user login options: OFF
+ Email based user registration/forgot password: Enabled (Requires per-user email entry at registration)
+ Please specify an email verification subject: Your verification code
+ Please specify an email verification message: Your verification code is {####}
+ Do you want to override the default password policy for this User Pool? No
+ Specify the app's refresh token expiration period (in days): 30
+ Do you want to specify the user attributes this app can read and write? No
+ Do you want to enable any of the following capabilities? 
+ Do you want to use an OAuth flow? No
+? Do you want to configure Lambda Triggers for Cognito? Yes
+? Which triggers do you want to enable for Cognito Pre Sign-up
+? What functionality do you want to use for Pre Sign-up Create your own module
+Successfully added resource landingd66ca829PreSignup locally.
+
+Next steps:
+Check out sample function code generated in <project-dir>/amplify/backend/function/landingd66ca829PreSignup/src
+"amplify function build" builds all of your functions currently in the project
+"amplify mock function <functionName>" runs your function locally
+"amplify push" builds all of your local backend resources and provisions them in the cloud
+"amplify publish" builds all of your local backend and front-end resources (if you added hosting category) and provisions them in the cloud
+Successfully added the Lambda function locally
+? Do you want to edit your custom function now? No
+Successfully updated auth resource landingd66ca829 locally
+
+Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+Successfully updated resource landingd66ca829 locally
+
+Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+
+cp: cannot stat '/home/dtal/BACKUPS/www.tracktunes.org/2021-08-15/backend/function/.eslintrc.json': No such file or directory
+cp: cannot stat '/home/dtal/BACKUPS/www.tracktunes.org/2021-08-15/backend/function/landing*PreSignup/src/*.js': No such file or directory
+cp: cannot stat '/home/dtal/BACKUPS/www.tracktunes.org/2021-08-15/backend/function/landing*PreSignup/src/package.json': No such file or directory
+ln: failed to access 'src/user-defaults.json': No such file or directory
+~/repos/www.tracktunes.org/amplify/backend/function/landingd66ca829PreSignup/src ~/repos/www.tracktunes.org
+yarn install v1.22.5
+info No lockfile found.
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 0.05s.
+~/repos/www.tracktunes.org
+spawn amplify push
+✔ Successfully pulled backend environment dev from the cloud.
+
+    Current Environment: dev
+    
+┌──────────┬──────────────────────────┬───────────┬───────────────────┐
+│ Category │ Resource name            │ Operation │ Provider plugin   │
+├──────────┼──────────────────────────┼───────────┼───────────────────┤
+│ Auth     │ landingd66ca829          │ Create    │ awscloudformation │
+├──────────┼──────────────────────────┼───────────┼───────────────────┤
+│ Function │ landingd66ca829PreSignup │ Create    │ awscloudformation │
+└──────────┴──────────────────────────┴───────────┴───────────────────┘
+? Are you sure you want to continue? Yes
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+UPDATE_IN_PROGRESS amplify-landing-dev-185206       AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:11 GMT-0400 (Eastern Daylight Time) User Initiated
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionRole   AWS::IAM::Role             Tue Aug 24 2021 18:53:15 GMT-0400 (Eastern Daylight Time)               
+CREATE_IN_PROGRESS authlandingd66ca829              AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time)               
+CREATE_IN_PROGRESS functionlandingd66ca829PreSignup AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time)               
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionRole   AWS::IAM::Role             Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS authlandingd66ca829              AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS functionlandingd66ca829PreSignup AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-landing-dev-185206-authlandingd66ca829-X8MQZNRN1FHI AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time) User Initiated
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-landing-dev-185206-functionlandingd66ca829PreSignup-ZWQBFTS15V08 AWS::CloudFormation::Stack Tue Aug 24 2021 18:53:16 GMT-0400 (Eastern Daylight Time) User Initiated             
+CREATE_IN_PROGRESS LambdaExecutionRole                                                      AWS::IAM::Role             Tue Aug 24 2021 18:53:20 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS LambdaExecutionRole                                                      AWS::IAM::Role             Tue Aug 24 2021 18:53:21 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS SNSRole AWS::IAM::Role Tue Aug 24 2021 18:53:24 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS SNSRole AWS::IAM::Role Tue Aug 24 2021 18:53:25 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UpdateRolesWithIDPFunctionRole AWS::IAM::Role Tue Aug 24 2021 18:53:31 GMT-0400 (Eastern Daylight Time) 
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE LambdaExecutionRole AWS::IAM::Role Tue Aug 24 2021 18:53:35 GMT-0400 (Eastern Daylight Time) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS LambdaFunction AWS::Lambda::Function Tue Aug 24 2021 18:53:38 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS LambdaFunction AWS::Lambda::Function Tue Aug 24 2021 18:53:40 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠦ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE SNSRole AWS::IAM::Role Tue Aug 24 2021 18:53:40 GMT-0400 (Eastern Daylight Time) 
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    LambdaFunction        AWS::Lambda::Function Tue Aug 24 2021 18:53:43 GMT-0400 (Eastern Daylight Time) 
+CREATE_IN_PROGRESS lambdaexecutionpolicy AWS::IAM::Policy      Tue Aug 24 2021 18:53:45 GMT-0400 (Eastern Daylight Time) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPool AWS::Cognito::UserPool Tue Aug 24 2021 18:53:43 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPool AWS::Cognito::UserPool Tue Aug 24 2021 18:53:45 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UserPool AWS::Cognito::UserPool Tue Aug 24 2021 18:53:46 GMT-0400 (Eastern Daylight Time)                            
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS lambdaexecutionpolicy AWS::IAM::Policy Tue Aug 24 2021 18:53:46 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientWeb AWS::Cognito::UserPoolClient Tue Aug 24 2021 18:53:49 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolClient    AWS::Cognito::UserPoolClient Tue Aug 24 2021 18:53:49 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolClientWeb AWS::Cognito::UserPoolClient Tue Aug 24 2021 18:53:51 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UserPoolClientWeb AWS::Cognito::UserPoolClient Tue Aug 24 2021 18:53:51 GMT-0400 (Eastern Daylight Time)                            
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClient     AWS::Cognito::UserPoolClient Tue Aug 24 2021 18:53:51 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UserPoolClient     AWS::Cognito::UserPoolClient Tue Aug 24 2021 18:53:52 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolClientRole AWS::IAM::Role               Tue Aug 24 2021 18:53:55 GMT-0400 (Eastern Daylight Time)                            
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE lambdaexecutionpolicy AWS::IAM::Policy Tue Aug 24 2021 18:53:59 GMT-0400 (Eastern Daylight Time) 
+⠦ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientRole AWS::IAM::Role Tue Aug 24 2021 18:53:56 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE functionlandingd66ca829PreSignup AWS::CloudFormation::Stack Tue Aug 24 2021 18:54:04 GMT-0400 (Eastern Daylight Time) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UserPoolClientRole AWS::IAM::Role Tue Aug 24 2021 18:54:10 GMT-0400 (Eastern Daylight Time) 
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientLambda AWS::Lambda::Function Tue Aug 24 2021 18:54:14 GMT-0400 (Eastern Daylight Time) 
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientLambda AWS::Lambda::Function Tue Aug 24 2021 18:54:16 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    UserPoolClientLambda       AWS::Lambda::Function Tue Aug 24 2021 18:54:17 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolClientLambdaPolicy AWS::IAM::Policy      Tue Aug 24 2021 18:54:20 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolClientLambdaPolicy AWS::IAM::Policy      Tue Aug 24 2021 18:54:21 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UserPoolClientLambdaPolicy AWS::IAM::Policy Tue Aug 24 2021 18:54:34 GMT-0400 (Eastern Daylight Time) 
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientLogPolicy AWS::IAM::Policy Tue Aug 24 2021 18:54:37 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolClientLogPolicy AWS::IAM::Policy Tue Aug 24 2021 18:54:38 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠦ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UserPoolClientLogPolicy AWS::IAM::Policy Tue Aug 24 2021 18:54:51 GMT-0400 (Eastern Daylight Time) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientInputs Custom::LambdaCallout Tue Aug 24 2021 18:54:54 GMT-0400 (Eastern Daylight Time) 
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UserPoolClientInputs Custom::LambdaCallout      Tue Aug 24 2021 18:54:57 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UserPoolClientInputs Custom::LambdaCallout      Tue Aug 24 2021 18:54:57 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS IdentityPool         AWS::Cognito::IdentityPool Tue Aug 24 2021 18:55:00 GMT-0400 (Eastern Daylight Time)                            
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS IdentityPool AWS::Cognito::IdentityPool Tue Aug 24 2021 18:55:02 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    IdentityPool AWS::Cognito::IdentityPool Tue Aug 24 2021 18:55:04 GMT-0400 (Eastern Daylight Time)                            
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS IdentityPoolRoleMap AWS::Cognito::IdentityPoolRoleAttachment Tue Aug 24 2021 18:55:07 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS IdentityPoolRoleMap AWS::Cognito::IdentityPoolRoleAttachment Tue Aug 24 2021 18:55:09 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    IdentityPoolRoleMap AWS::Cognito::IdentityPoolRoleAttachment Tue Aug 24 2021 18:55:09 GMT-0400 (Eastern Daylight Time)                            
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-landing-dev-185206-authlandingd66ca829-X8MQZNRN1FHI AWS::CloudFormation::Stack Tue Aug 24 2021 18:55:12 GMT-0400 (Eastern Daylight Time) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    authlandingd66ca829          AWS::CloudFormation::Stack Tue Aug 24 2021 18:55:32 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS AuthTriggerCustomLambdaStack AWS::CloudFormation::Stack Tue Aug 24 2021 18:55:34 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunction   AWS::Lambda::Function      Tue Aug 24 2021 18:55:34 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS AuthTriggerCustomLambdaStack AWS::CloudFormation::Stack Tue Aug 24 2021 18:55:35 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠧ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-landing-dev-185206-AuthTriggerCustomLambdaStack-CIR1Q4FP07XL AWS::CloudFormation::Stack Tue Aug 24 2021 18:55:35 GMT-0400 (Eastern Daylight Time) User Initiated
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunction        AWS::Lambda::Function Tue Aug 24 2021 18:55:36 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UpdateRolesWithIDPFunction        AWS::Lambda::Function Tue Aug 24 2021 18:55:37 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionOutputs Custom::LambdaCallout Tue Aug 24 2021 18:55:39 GMT-0400 (Eastern Daylight Time)                            
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS authTriggerFnServiceRole08093B67        AWS::IAM::Role          Tue Aug 24 2021 18:55:40 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS authTriggerFnServiceRole08093B67        AWS::IAM::Role          Tue Aug 24 2021 18:55:40 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS UserPoolPreSignUpLambdaInvokePermission AWS::Lambda::Permission Tue Aug 24 2021 18:55:40 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS UserPoolPreSignUpLambdaInvokePermission AWS::Lambda::Permission Tue Aug 24 2021 18:55:40 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS UpdateRolesWithIDPFunctionOutputs Custom::LambdaCallout Tue Aug 24 2021 18:55:43 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UpdateRolesWithIDPFunctionOutputs Custom::LambdaCallout Tue Aug 24 2021 18:55:44 GMT-0400 (Eastern Daylight Time)                            
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE UserPoolPreSignUpLambdaInvokePermission AWS::Lambda::Permission Tue Aug 24 2021 18:55:51 GMT-0400 (Eastern Daylight Time) 
+⠦ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE authTriggerFnServiceRole08093B67 AWS::IAM::Role Tue Aug 24 2021 18:55:54 GMT-0400 (Eastern Daylight Time) 
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS authTriggerFnServiceRoleDefaultPolicyEC9285A8 AWS::IAM::Policy Tue Aug 24 2021 18:55:57 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS authTriggerFnServiceRoleDefaultPolicyEC9285A8 AWS::IAM::Policy Tue Aug 24 2021 18:55:58 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+⠼ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE authTriggerFnServiceRoleDefaultPolicyEC9285A8 AWS::IAM::Policy Tue Aug 24 2021 18:56:11 GMT-0400 (Eastern Daylight Time) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS authTriggerFn7FCFA449 AWS::Lambda::Function Tue Aug 24 2021 18:56:13 GMT-0400 (Eastern Daylight Time)                            
+CREATE_IN_PROGRESS authTriggerFn7FCFA449 AWS::Lambda::Function Tue Aug 24 2021 18:56:15 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    authTriggerFn7FCFA449 AWS::Lambda::Function Tue Aug 24 2021 18:56:16 GMT-0400 (Eastern Daylight Time)                            
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS CustomAuthTriggerResource Custom::CustomAuthTriggerResourceOutputs Tue Aug 24 2021 18:56:21 GMT-0400 (Eastern Daylight Time) 
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS CustomAuthTriggerResource Custom::CustomAuthTriggerResourceOutputs Tue Aug 24 2021 18:56:25 GMT-0400 (Eastern Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    CustomAuthTriggerResource Custom::CustomAuthTriggerResourceOutputs Tue Aug 24 2021 18:56:25 GMT-0400 (Eastern Daylight Time)                            
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-landing-dev-185206-AuthTriggerCustomLambdaStack-CIR1Q4FP07XL AWS::CloudFormation::Stack Tue Aug 24 2021 18:56:26 GMT-0400 (Eastern Daylight Time) 
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE                     AuthTriggerCustomLambdaStack AWS::CloudFormation::Stack Tue Aug 24 2021 18:56:37 GMT-0400 (Eastern Daylight Time) 
+UPDATE_COMPLETE_CLEANUP_IN_PROGRESS amplify-landing-dev-185206   AWS::CloudFormation::Stack Tue Aug 24 2021 18:56:39 GMT-0400 (Eastern Daylight Time) 
+UPDATE_COMPLETE                     amplify-landing-dev-185206   AWS::CloudFormation::Stack Tue Aug 24 2021 18:56:40 GMT-0400 (Eastern Daylight Time) 
+✔ All resources are updated in the cloud
+
+
+
+    Current Environment: dev
+    
+┌──────────┬──────────────────────────┬───────────┬───────────────────┐
+│ Category │ Resource name            │ Operation │ Provider plugin   │
+├──────────┼──────────────────────────┼───────────┼───────────────────┤
+│ Auth     │ landingd66ca829          │ No Change │ awscloudformation │
+├──────────┼──────────────────────────┼───────────┼───────────────────┤
+│ Function │ landingd66ca829PreSignup │ No Change │ awscloudformation │
+└──────────┴──────────────────────────┴───────────┴───────────────────┘
+
+
+Amplify CLI version: 5.3.1
