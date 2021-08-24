@@ -4,7 +4,6 @@ $margin: 14px;
 $maxWidth: 380px;
 
 ion-content {
-    /* background-color: var(--global-background-color); */
     --background: black;
     h1, h2 {
         color: var(--ion-color-light);
@@ -27,12 +26,12 @@ ion-content {
         --background: #dbdbdb;
         color: black;
         max-width: $maxWidth;
-        line-height: 2.1em;
+        line-height: 2.2em;
         margin: 0 auto;
         margin-top: $margin;
     }
     ion-button.sign-up {
-        height: 2.8em;
+        height: 2.9em;
         font-weight: 900;
         font-size: 1.2em;
         --border-radius: 0;
