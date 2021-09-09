@@ -1,12 +1,12 @@
 {
   "auth": {
-    "landingee018e34": {
+    "landing68e120b9": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "landingee018e34PreSignup",
+          "resourceName": "landing68e120b9PreSignup",
           "triggerProvider": "Cognito",
           "attributes": [
             "Arn",
@@ -34,7 +34,7 @@
     }
   },
   "function": {
-    "landingee018e34PreSignup": {
+    "landing68e120b9PreSignup": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
