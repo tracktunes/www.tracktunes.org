@@ -19,7 +19,7 @@ export class HomePage {
             console.log('valid email');
             Auth.signUp({
                 username: this.email,
-                password: 'harofe46X;',
+                password: 'dummy123X',
                 attributes: { email: this.email }
             }).then(res => { console.log(res); });
         }
