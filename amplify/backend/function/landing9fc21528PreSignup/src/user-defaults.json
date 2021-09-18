@@ -1,0 +1,34 @@
+{
+    "imageType": "Icon",
+    "bytesQuota": 2000000000,
+    "maxUpdatesIn24h": 9,
+    "maxUploadsIn24h": 999,
+    "maxClientImageFileSize": 50000000,
+    "allowedImageMimeTypes": [
+        "image/jpeg",
+        "image/png"
+    ],
+    "allowedAudioMimeTypes": [
+        "audio/mpeg",
+        "audio/wav",
+        "audio/flac"
+    ],
+    "s3MaxImageFileSize": 40000,
+    "s3MaxImageSideLength": 128,
+    "s3MaxAudioFileSize": 5000000000,
+    "s3ProfileImageFileName": "profile-image.png",
+    "s3PictureBackupFileName": "picture-backup.png",
+    "tooManyUpdatesStatusCode": 501,
+    "colorPalette": [
+        { "fg": "fff", "bg": "42C6B6" },
+        { "fg": "fff", "bg": "925F9C" },
+        { "fg": "fff", "bg": "8699BF" },
+        { "fg": "000", "bg": "FFC029" },
+        { "fg": "fff", "bg": "527BC8" },
+        { "fg": "000", "bg": "80CED7" },
+        { "fg": "000", "bg": "F59923" },
+        { "fg": "fff", "bg": "B1139D" },
+        { "fg": "fff", "bg": "6A2578" },
+        { "fg": "fff", "bg": "F56223" }
+    ]
+}

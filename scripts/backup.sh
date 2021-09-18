@@ -10,7 +10,7 @@ BACKUP_DIR="$HOME/BACKUPS/$PROJECT_HOME/`date +%F`"
 
 mkdir -p "$BACKUP_DIR"
 
-sudo mount-backup
+# sudo mount-backup
 
 TMP_DIR="$MY_DIR/../../$RANDOM"
 

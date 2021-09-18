@@ -1,12 +1,12 @@
 {
   "auth": {
-    "landing68e120b9": {
+    "landing9fc21528": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "landing68e120b9PreSignup",
+          "resourceName": "landing9fc21528PreSignup",
           "triggerProvider": "Cognito",
           "attributes": [
             "Arn",
@@ -16,9 +16,7 @@
       ],
       "customAuth": false,
       "frontendAuthConfig": {
-        "loginMechanisms": [
-          "EMAIL"
-        ],
+        "loginMechanisms": [],
         "signupAttributes": [
           "EMAIL"
         ],
@@ -29,12 +27,15 @@
         "mfaConfiguration": "OFF",
         "mfaTypes": [
           "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
         ]
       }
     }
   },
   "function": {
-    "landing68e120b9PreSignup": {
+    "landing9fc21528PreSignup": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
