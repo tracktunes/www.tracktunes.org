@@ -1,0 +1,11 @@
+#!/bin/bash
+
+USERNAME=$1
+
+MY_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+USER_POOL_ID="`grep aws_user_pools_id $MY_DIR/../src/aws-exports.js | awk '{print $2}' | sed 's/[",]//g'`"
+
+aws cognito-idp admin-delete-user \
+    --username $USERNAME \
+    --user-pool-id $USER_POOL_ID
