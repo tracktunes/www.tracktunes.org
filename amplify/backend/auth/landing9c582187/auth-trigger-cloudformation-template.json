@@ -11,10 +11,10 @@
     "userpoolArn": {
       "Type": "String"
     },
-    "functionlanding45d89b7bPreSignupName": {
+    "functionlanding9c582187PreSignupName": {
       "Type": "String"
     },
-    "functionlanding45d89b7bPreSignupArn": {
+    "functionlanding9c582187PreSignupArn": {
       "Type": "String"
     }
   },
@@ -34,7 +34,7 @@
       "Properties": {
         "Action": "lambda:InvokeFunction",
         "FunctionName": {
-          "Ref": "functionlanding45d89b7bPreSignupName"
+          "Ref": "functionlanding9c582187PreSignupName"
         },
         "Principal": "cognito-idp.amazonaws.com",
         "SourceArn": {
@@ -134,9 +134,9 @@
         "lambdaConfig": [
           {
             "triggerType": "PreSignUp",
-            "lambdaFunctionName": "landing45d89b7bPreSignup",
+            "lambdaFunctionName": "landing9c582187PreSignup",
             "lambdaFunctionArn": {
-              "Ref": "functionlanding45d89b7bPreSignupArn"
+              "Ref": "functionlanding9c582187PreSignupArn"
             }
           }
         ]
