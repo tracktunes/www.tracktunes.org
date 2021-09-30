@@ -5,7 +5,7 @@ export const EMAIL_MIN_LEN: number = 8;
 // See http://rumkin.com/software/email/rules.php
 // and http://badsyntax.co/post/javascript-email-validation-rfc822
 // eslint-disable-next-line
-export const EMAIL_REG_EXP: RegExp = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+export const EMAIL_REGEXP: RegExp = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const VALID_DOMAINS: Set<string> = new Set([
     'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'hotmail.co.uk',
@@ -1707,7 +1707,7 @@ export const validateEmail: (email: string, testDomain: boolean) => boolean =
         }
 
         const len: number = email.length;
-        return EMAIL_REG_EXP.test(email) &&
+        return EMAIL_REGEXP.test(email) &&
             !(len > EMAIL_MAX_LEN || len < EMAIL_MIN_LEN ||
               email[0] === '.' || email[len-1] === '.');
     };
