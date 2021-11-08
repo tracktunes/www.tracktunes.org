@@ -1,9 +1,19 @@
 {
   "auth": {
-    "landingfdbad2f8": {
+    "landing537a1937": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "landing537a1937PreSignup",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
       "customAuth": false,
       "frontendAuthConfig": {
         "loginMechanisms": [
@@ -24,6 +34,13 @@
           "EMAIL"
         ]
       }
+    }
+  },
+  "function": {
+    "landing537a1937PreSignup": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }
