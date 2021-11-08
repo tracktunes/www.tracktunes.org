@@ -21,7 +21,7 @@ $MY_DIR/amplify_add_auth.exp
 
 $MY_DIR/amplify_auth_update.exp
 
-$MY_DIR/rebuild_lambdas.sh $BACKUP_DIR
+# $MY_DIR/rebuild_lambdas.sh $BACKUP_DIR
 
 $MY_DIR/amplify_push.exp
 
