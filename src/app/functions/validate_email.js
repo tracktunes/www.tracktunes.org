@@ -1674,9 +1674,10 @@ const VALID_TLDS = new Set([
     'ZW'
 ]);
 
-export const validateEmail = (email, testDomain) => {
+const validateEmail = (email, testDomain) => {
     // make sure it's all ascii-text
-    if (/[^\x00-x7F]/.test(email)) {
+    
+    if (/[^\x00-x7F]/.test(email)) { // eslint-disable-line
         return false;
     }
     const parts = email.split('@');
@@ -1705,3 +1706,5 @@ export const validateEmail = (email, testDomain) => {
         !(len > EMAIL_MAX_LEN || len < EMAIL_MIN_LEN ||
             email[0] === '.' || email[len - 1] === '.');
 };
+
+module.exports = validateEmail;

@@ -1708,7 +1708,7 @@ const validateEmail = (email, testDomain) => {
 };
 
 if (typeof window === 'undefined') {
-    module.exports = { validateEmail };
+    module.exports = validateEmail;
 } else {
     window.validateEmail = validateEmail;
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from 'aws-amplify';
-import { validateEmail } from '../../functions/email';
+import validateEmail from '../../functions/validate_email';
 
 @Component({
     selector: 'app-home',
