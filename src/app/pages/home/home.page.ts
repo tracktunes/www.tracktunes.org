@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from 'aws-amplify';
+import { IonContent } from '@ionic/angular';
+
 import validateEmail from '../../functions/validate_email';
 
 @Component({
@@ -9,6 +11,7 @@ import validateEmail from '../../functions/validate_email';
     styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+    @ViewChild(IonContent, {read: IonContent, static: false}) content;
     public bShowLearnMore: boolean = false;
     public email: string = null;
 
@@ -29,5 +32,8 @@ export class HomePage {
 
     public onClickLearnMore(): void {
         this.bShowLearnMore = true;
+        setTimeout(() => {
+            this.content.scrollToBottom(500)
+        }, 500);
     }
 }
