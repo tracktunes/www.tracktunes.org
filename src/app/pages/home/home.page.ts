@@ -33,7 +33,7 @@ export class HomePage {
     public onClickLearnMore(): void {
         this.bShowLearnMore = true;
         setTimeout(() => {
-            this.content.scrollToBottom(500)
+            this.content.scrollToBottom(500);
         }, 500);
     }
 }
