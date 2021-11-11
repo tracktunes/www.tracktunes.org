@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true"
              class="background ion-padding ion-text-center">
-    <h1><strong>Tracktunes</strong></h1>
+    <h1><strong>The Tracktunes App</strong></h1>
     <p>A browser app for multi-track recording collaborations</p>
     <h2>Make music with other musicians worldwide</h2>
     <ion-img src="assets/image/tracktunes-logo.png"></ion-img>
@@ -11,8 +11,15 @@
     </ion-button>
     <ion-button class="learn-more" color="warning" size="small"
                 fill="outline" (click)="onClickLearnMore()">
-        Learn More
+        Terms / Learn More
     </ion-button>
+    <p *ngIf="bShowLearnMore">
+        Tracktunes Inc is a public benefit corporation dedicated to
+        help musicians make a living. Its vision is a world where
+        talented musicians make a good living. It's mission is to
+        build tools that help reach the vision.
+    </p>
+
     <p *ngIf="bShowLearnMore">
         Sign up for early access to our music collaboration app. To
         thank you for your early participation, you'll receive double
