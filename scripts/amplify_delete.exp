@@ -1,10 +1,1 @@
-#!/usr/bin/expect -f
-
-set timeout -1
-
-spawn amplify delete
-
-expect "(y/N)"
-send -- "y\r"
-
-interact
+../../tracktunes-common/scripts/amplify_delete.exp
