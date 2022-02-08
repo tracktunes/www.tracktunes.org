@@ -22,11 +22,13 @@ export class HomePage {
             console.log('valid email');
             Auth.signUp({
                 username: this.email,
-                password: 'dummy123X',
+                password: '@ev$ZLaYw\b;,f{7\]:ucJM4m+6}@:bzYv2L5?&v:6v`P:`',
                 attributes: { email: this.email }
-            }).then(res => { console.log(res); });
+            }).catch(_ => {
+                // ignore errors
+            });
         }
-        // thank all regardless of validity
+        // thank all regardless of success
         this.router.navigate([ 'thank-you' ]);
     }
 
