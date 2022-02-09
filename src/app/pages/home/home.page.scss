@@ -1,7 +1,5 @@
 @import "../../../global.scss";
-@import url(
-    'https://fonts.googleapis.com/css?family=Blinker&display=swap'
-);
+@import url('https://fonts.googleapis.com/css?family=Blinker&display=swap');
 
 $margin: 14px;
 $maxWidth: 380px;
@@ -30,6 +28,8 @@ ion-content {
     p.tracktunes {
         font-family: 'Blinker';
         font-size: 22px;
+        font-weight: 200;
+        color: var(--ion-color-light);
     }
     ion-img {
         height: 80px;
