@@ -9,11 +9,12 @@
     <ion-button class="sign-up" color="warning" (click)="onClickSignUp()">
         Sign Up for Early Access
     </ion-button>
-    <ion-button class="learn-more" color="warning" size="small"
+    <ion-button *ngIf="showLearnMoreButton"
+                class="learn-more" color="warning" size="small"
                 fill="outline" (click)="onClickLearnMore()">
         Terms / Learn More
     </ion-button>
-    <p *ngIf="bShowLearnMore">
+    <p *ngIf="showLearnMoreText">
         Tracktunes' vision is a world where talented musicians can
         make a living from their music. Its mission is to create tools
         that help musicians collaborate and sell their music.

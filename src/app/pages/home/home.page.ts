@@ -12,7 +12,8 @@ import validateEmail from '../../functions/validate_email';
 })
 export class HomePage {
     @ViewChild(IonContent, {read: IonContent, static: false}) content;
-    public bShowLearnMore: boolean = false;
+    public showLearnMoreText: boolean = false;
+    public showLearnMoreButton: boolean = true;
     public email: string = null;
 
     constructor(private router: Router) {}
@@ -37,7 +38,8 @@ export class HomePage {
     }
 
     public onClickLearnMore(): void {
-        this.bShowLearnMore = true;
+        this.showLearnMoreText = true;
+        this.showLearnMoreButton = false;
         setTimeout(() => {
             this.content.scrollToBottom(500);
         }, 500);
