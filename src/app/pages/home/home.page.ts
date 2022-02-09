@@ -15,7 +15,7 @@ export class HomePage {
     public bShowLearnMore: boolean = false;
     public email: string = null;
 
-    constructor(private router: Router) { }
+    constructor(private router: Router) {}
 
     public onClickSignUp(): void {
         if (validateEmail(this.email, true)) {
@@ -24,9 +24,12 @@ export class HomePage {
                 username: this.email,
                 password: '@ev$ZLaYw\b;,f{7\]:ucJM4m+6}@:bzYv2L5?&v:6v`P:`',
                 attributes: { email: this.email }
-            }).catch(_ => {
+            }).catch(err => {
                 // ignore errors
+                console.log('caught error: ', err);
             });
+        } else {
+            console.log('invalid email: ', this.email);
         }
         // thank all regardless of success
         this.router.navigate([ 'thank-you' ]);

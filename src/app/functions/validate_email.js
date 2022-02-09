@@ -5,7 +5,7 @@ const EMAIL_MIN_LEN = 8;
 // and http://badsyntax.co/post/javascript-email-validation-rfc822
 // eslint-disable-next-line
 const EMAIL_REGEXP = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const VALID_DOMAINS = new Set([
+const VALID_DOMAINS = new Set([ 'tracktunes.org',
     'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'hotmail.co.uk',
     'hotmail.fr', 'msn.com', 'yahoo.fr', 'wanadoo.fr', 'orange.fr',
     'comcast.net', 'yahoo.co.uk', 'yahoo.com.br', 'yahoo.co.in', 'live.com',
