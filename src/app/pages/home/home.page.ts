@@ -31,8 +31,9 @@ export class HomePage {
         } else {
             console.log('invalid email: ', this.email);
         }
-        // thank all regardless of success
-        this.router.navigate([ 'thank-you' ]);
+        if (this.email) {
+            this.router.navigate([ 'thank-you' ]);
+        }
     }
 
     public onClickLearnMore(): void {

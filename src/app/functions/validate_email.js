@@ -1676,7 +1676,9 @@ const VALID_TLDS = new Set([
 
 const validateEmail = (email, testDomain) => {
     // make sure it's all ascii-text
-    
+    if (!email) {
+        return false;
+    }
     if (/[^\x00-x7F]/.test(email)) { // eslint-disable-line
         return false;
     }
