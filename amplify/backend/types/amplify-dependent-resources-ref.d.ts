@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
     "auth": {
-        "landingf6e3d053": {
+        "landing4372ca06": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",
@@ -12,7 +12,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "function": {
-        "landingf6e3d053PreSignup": {
+        "landing4372ca06PreSignup": {
             "Name": "string",
             "Arn": "string",
             "LambdaExecutionRole": "string",

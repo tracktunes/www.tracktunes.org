@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "landingf6e3d053_identitypool_f6e3d053",
+    "identityPoolName": "landing4372ca06_identitypool_4372ca06",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "landinf6e3d053",
-    "userPoolName": "landingf6e3d053_userpool_f6e3d053",
+    "resourceNameTruncated": "landin4372ca06",
+    "userPoolName": "landing4372ca06_userpool_4372ca06",
     "autoVerifiedAttributes": [
       "phone_number"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "landinf6e3d053_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "landin4372ca06_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "f6e3d053",
-    "resourceName": "landingf6e3d053",
+    "sharedId": "4372ca06",
+    "resourceName": "landing4372ca06",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "usernameAttributes": [
@@ -60,7 +60,7 @@
     "dependsOn": [
       {
         "category": "function",
-        "resourceName": "landingf6e3d053PreSignup",
+        "resourceName": "landing4372ca06PreSignup",
         "triggerProvider": "Cognito",
         "attributes": [
           "Arn",
@@ -81,7 +81,7 @@
     "parentStack": {
       "Ref": "AWS::StackId"
     },
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PreSignUp\",\n    \"lambdaFunctionName\": \"landingf6e3d053PreSignup\"\n  }\n]",
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PreSignUp\",\n    \"lambdaFunctionName\": \"landing4372ca06PreSignup\"\n  }\n]",
     "permissions": []
   }
 }
