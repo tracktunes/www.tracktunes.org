@@ -1,122 +1,24 @@
-<!DOCTYPE HTML>
-<!--
-    Eventually by HTML5 UP
-    html5up.net | @ajlkn
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="utf-8">
+        <title>Tracktunes</title>
 
-    Free for personal and commercial use under the CCA 3.0 license
-    (html5up.net/license)
+        <base href="/">
 
-    Now Tracktunes Inc pre private-beta landing page.
-  -->
+        <meta name="color-scheme" content="light dark">
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
 
-<html>
+        <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
 
-    <head>
-	<title>Tracktunes</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-    </head>
+        <!-- add to homescreen for ios -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>:root{--ion-color-primary:#ef4423;--ion-color-primary-rgb:239,68,35;--ion-color-primary-contrast:#fff;--ion-color-primary-contrast-rgb:255,255,255;--ion-color-primary-shade:#d23c1f;--ion-color-primary-tint:#f15739;--ion-color-secondary:#3dc2ff;--ion-color-secondary-rgb:61,194,255;--ion-color-secondary-contrast:#fff;--ion-color-secondary-contrast-rgb:255,255,255;--ion-color-secondary-shade:#36abe0;--ion-color-secondary-tint:#50c8ff;--ion-color-tertiary:#5260ff;--ion-color-tertiary-rgb:82,96,255;--ion-color-tertiary-contrast:#fff;--ion-color-tertiary-contrast-rgb:255,255,255;--ion-color-tertiary-shade:#4854e0;--ion-color-tertiary-tint:#6370ff;--ion-color-success:#2dd36f;--ion-color-success-rgb:45,211,111;--ion-color-success-contrast:#fff;--ion-color-success-contrast-rgb:255,255,255;--ion-color-success-shade:#28ba62;--ion-color-success-tint:#42d77d;--ion-color-warning:#ffc409;--ion-color-warning-rgb:255,196,9;--ion-color-warning-contrast:#000;--ion-color-warning-contrast-rgb:0,0,0;--ion-color-warning-shade:#e0ac08;--ion-color-warning-tint:#ffca22;--ion-color-danger:#eb445a;--ion-color-danger-rgb:235,68,90;--ion-color-danger-contrast:#fff;--ion-color-danger-contrast-rgb:255,255,255;--ion-color-danger-shade:#cf3c4f;--ion-color-danger-tint:#ed576b;--ion-color-dark:#222428;--ion-color-dark-rgb:34,36,40;--ion-color-dark-contrast:#fff;--ion-color-dark-contrast-rgb:255,255,255;--ion-color-dark-shade:#1e2023;--ion-color-dark-tint:#383a3e;--ion-color-medium:#92949c;--ion-color-medium-rgb:146,148,156;--ion-color-medium-contrast:#fff;--ion-color-medium-contrast-rgb:255,255,255;--ion-color-medium-shade:#808289;--ion-color-medium-tint:#9d9fa6;--ion-color-light:#f4f5f8;--ion-color-light-rgb:244,245,248;--ion-color-light-contrast:#000;--ion-color-light-contrast-rgb:0,0,0;--ion-color-light-shade:#d7d8da;--ion-color-light-tint:#f5f6f9}@media (prefers-color-scheme: dark){body{--ion-color-primary:#428cff;--ion-color-primary-rgb:66,140,255;--ion-color-primary-contrast:#fff;--ion-color-primary-contrast-rgb:255,255,255;--ion-color-primary-shade:#3a7be0;--ion-color-primary-tint:#5598ff;--ion-color-secondary:#50c8ff;--ion-color-secondary-rgb:80,200,255;--ion-color-secondary-contrast:#fff;--ion-color-secondary-contrast-rgb:255,255,255;--ion-color-secondary-shade:#46b0e0;--ion-color-secondary-tint:#62ceff;--ion-color-tertiary:#6a64ff;--ion-color-tertiary-rgb:106,100,255;--ion-color-tertiary-contrast:#fff;--ion-color-tertiary-contrast-rgb:255,255,255;--ion-color-tertiary-shade:#5d58e0;--ion-color-tertiary-tint:#7974ff;--ion-color-success:#2fdf75;--ion-color-success-rgb:47,223,117;--ion-color-success-contrast:#000;--ion-color-success-contrast-rgb:0,0,0;--ion-color-success-shade:#29c467;--ion-color-success-tint:#44e283;--ion-color-warning:#ffd534;--ion-color-warning-rgb:255,213,52;--ion-color-warning-contrast:#000;--ion-color-warning-contrast-rgb:0,0,0;--ion-color-warning-shade:#e0bb2e;--ion-color-warning-tint:#ffd948;--ion-color-danger:#ff4961;--ion-color-danger-rgb:255,73,97;--ion-color-danger-contrast:#fff;--ion-color-danger-contrast-rgb:255,255,255;--ion-color-danger-shade:#e04055;--ion-color-danger-tint:#ff5b71;--ion-color-dark:#f4f5f8;--ion-color-dark-rgb:244,245,248;--ion-color-dark-contrast:#000;--ion-color-dark-contrast-rgb:0,0,0;--ion-color-dark-shade:#d7d8da;--ion-color-dark-tint:#f5f6f9;--ion-color-medium:#989aa2;--ion-color-medium-rgb:152,154,162;--ion-color-medium-contrast:#000;--ion-color-medium-contrast-rgb:0,0,0;--ion-color-medium-shade:#86888f;--ion-color-medium-tint:#a2a4ab;--ion-color-light:#222428;--ion-color-light-rgb:34,36,40;--ion-color-light-contrast:#fff;--ion-color-light-contrast-rgb:255,255,255;--ion-color-light-shade:#1e2023;--ion-color-light-tint:#383a3e}}html{--ion-font-family:var(--ion-default-font)}body{background:var(--ion-background-color)}@supports (padding-top: 20px){html{--ion-safe-area-top:var(--ion-statusbar-padding)}}@supports (padding-top: constant(safe-area-inset-top)){html{--ion-safe-area-top:constant(safe-area-inset-top);--ion-safe-area-bottom:constant(safe-area-inset-bottom);--ion-safe-area-left:constant(safe-area-inset-left);--ion-safe-area-right:constant(safe-area-inset-right)}}@supports (padding-top: env(safe-area-inset-top)){html{--ion-safe-area-top:env(safe-area-inset-top);--ion-safe-area-bottom:env(safe-area-inset-bottom);--ion-safe-area-left:env(safe-area-inset-left);--ion-safe-area-right:env(safe-area-inset-right)}}*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}html{width:100%;height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}html:not(.hydrated) body{display:none}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;margin:0;padding:0;position:fixed;width:100%;max-width:100%;height:100%;max-height:100%;text-rendering:optimizeLegibility;overflow:hidden;touch-action:manipulation;-webkit-user-drag:none;-ms-content-zooming:none;word-wrap:break-word;overscroll-behavior-y:none;-webkit-text-size-adjust:none;text-size-adjust:none}html{font-family:var(--ion-font-family)}</style><link rel="stylesheet" href="styles.5553d9270e28baa2d30d.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.5553d9270e28baa2d30d.css"></noscript></head>
 
-    <body class="is-preload">
+    <body>
+        <app-root></app-root>
+    <script src="runtime.b51ca04b1dd77162066a.js" defer></script><script src="polyfills.515ff1ddaef91da5308f.js" defer></script><script src="main.f66322196e53c1e47c22.js" defer></script>
 
-	<!-- Header -->
-	<header id="header">
-	    <h1>The Tracktunes App</h1>
 
-            <p>A browser app that helps musicians collaborate on
-            multi-track recordings.</p>
-
-            <h2>Record tracks with other musicians from around the world!</h2>
-
-	    <p>Sign up for early access to our music collaboration app:</p>
-        </header>
-
-	<!-- Begin MailChimp Signup Form -->
-	<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-	<style type="text/css">
-	    #mc_embed_signup {
-		background: transparent;
-		clear: left;
-		font: 14px Helvetica, Arial, sans-serif;
-		width: 100%;
-	    }
-
-	    /* Add your own MailChimp form style overrides in your
-	    site stylesheet or in this style block.  We recommend
-	    moving this block and the preceding CSS link to the HEAD
-	    of your HTML file. */
-	</style>
-	<div id="mc_embed_signup">
-	    <form action="https://tracktunes.us19.list-manage.com/subscribe/post?u=c759e7c64cca415b176e1fe38&amp;id=c94027dc1a"
-		  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-		  novalidate>
-		<div id="mc_embed_signup_scroll">
-		    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-		    <!-- real people should not fill this in and
-		         expect good things - do not remove this or risk
-		         form bot signups-->
-		    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-			<input type="text" name="b_c759e7c64cca415b176e1fe38_c94027dc1a" tabindex="-1" value="">
-		    </div>
-		    <div class="clear">
-			<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-		    </div>
-		</div>
-	    </form>
-	</div>
-
-        <p>To thank you for your early participation, we'll offer a
-            free cloud storage subscription with the invite.</p>
-        <p>We respect your privacy and will never reveal your
-            email address.</p>
-
-	<!-- Footer -->
-	<footer id="footer">
-	    <ul class="icons">
-		<!--li><a href="https://github.com/tracktunes"
-                    class="icon fa-github">
-                    <span class="label">GitHub</span></a></li-->
-			                                     <li><a href="mailto:info@tracktunes.org" class="icon fa-envelope-o">
-					                             <span class="label">Email</span></a></li>
-	    </ul>
-	    <ul class="copyright">
-		<li>
-		    Copyright &copy; 2022 Tracktunes Inc
-		</li>
-		<li>
-		    This page is a modified version of an
-		    <a href="https://html5up.net/eventually">HTML5 UP page</a>.
-		    License:
-		    <a href="https://html5up.net/license">
-			Creative Commons Attribution 3.0
-		    </a>.
-		</li>
-	    </ul>
-	</footer>
-
-	<!-- Scripts -->
-	<script src="assets/js/main.js"></script>
-
-	<!-- google analytics script is loaded last as to not block rendering -->
-	<script>
-	    (function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function () {
-		    (i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new
-		Date();
-		a = s.createElement(o),
-		m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-	    ga('create', 'UA-65259548-1', 'auto');
-	    ga('send', 'pageview');
-	</script>
-
-    </body>
-
-</html>
+</body></html>
