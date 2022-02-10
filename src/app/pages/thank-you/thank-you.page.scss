@@ -1,10 +1,29 @@
+$margin: 14px;
+$maxWidth: 380px;
+
+
 ion-content {
     --background: black;
-    h1, h2, h3, h4, p  {
+    h1, h2, h3, h4, p {
         color: var(--ion-color-light);
-        max-width: var(--global-max-width);
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    p {
+        color: var(--ion-color-medium);
+    }
+    ion-img {
+        height: 80px;
+        margin-top: $margin;
+        margin-bottom: $margin;
+    }
+    p.tracktunes {
+        text-align: center;
+        font-family: 'Blinker';
+        font-size: 22px;
+        font-weight: 200;
+        color: var(--ion-color-light);
         margin: 0 auto;
     }
 
 }
-
