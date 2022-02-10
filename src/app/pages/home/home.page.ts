@@ -19,20 +19,21 @@ export class HomePage {
     constructor(private router: Router) {}
 
     public onClickSignUp(): void {
-        if (validateEmail(this.email, true)) {
+        const email = this.email.trim();
+        if (validateEmail(email, true)) {
             // console.log('valid email');
             Auth.signUp({
-                username: this.email,
+                username: email,
                 password: '@ev$ZLaYw\b;,f{7\]:ucJM4m+6}@:bzYv2L5?&v:6v`P:`',
-                attributes: { email: this.email }
+                attributes: { email }
             }).catch(err => {
                 // ignore errors
                 // console.log('caught error: ', err);
             });
         } else {
-            // console.log('invalid email: ', this.email);
+            // console.log('invalid email: ', email);
         }
-        if (this.email) {
+        if (email) {
             this.router.navigate([ 'thank-you' ]);
         }
     }

@@ -1677,29 +1677,35 @@ const VALID_TLDS = new Set([
 const validateEmail = (email, testDomain) => {
     // make sure it's all ascii-text
     if (!email) {
+        console.log(email + '--> 1');
         return false;
     }
-    if (/[^\x00-x7F]/.test(email)) { // eslint-disable-line
+    if (/[^\x00-\x7F]/.test(email)) { // eslint-disable-line
+        console.log(email + '--> 2');
         return false;
     }
     const parts = email.split('@');
     if (parts.length !== 2) {
+        console.log(email + '--> 3');
         return false;
     }
     const domain = parts[1].toLowerCase();
     // our acceptable domains must start with an alphanumeric character
     if (/[^a-zA-Z0-9]/.test(domain[0])) {
+        console.log(email + '--> 4');
         return false;
     }
     if (testDomain &&
         !VALID_DOMAINS.has(domain) ||
         NON_VALID_DOMAINS.has(domain)) {
+        console.log(email + '--> 5');
         return false;
     }
     else {
         // at least check the TLD
         const tld = domain.split('.').splice(-1)[0].toUpperCase();
         if (!VALID_TLDS.has(tld)) {
+            console.log(email + '--> 6');
             return false;
         }
     }

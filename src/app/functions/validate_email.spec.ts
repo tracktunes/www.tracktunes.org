@@ -1,7 +1,8 @@
-import { validateEmail } from './validate_email';
+import validateEmail from  './validate_email';
 
 const CORRECT_EMAIL_ADDRESSES = [
     'test@example.org',
+    'jameshendrix@yahoo.com',
     'firstname.lastname@example.com',
     'email@subdomain.example.com',
     'firstname+lastname@example.com',
