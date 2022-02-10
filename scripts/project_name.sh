@@ -1,0 +1,1 @@
+../../tracktunes-common/scripts/project_name.sh
