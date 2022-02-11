@@ -1,4 +1,4 @@
-exports.handler = (event, context, callback) => {
-  // insert code to be executed by your lambda trigger
-  callback(null, event);
+exports.handler = async event => {
+    console.log('CUST EVENT:', JSON.stringify(event, null, 2));
+    return event;
 };

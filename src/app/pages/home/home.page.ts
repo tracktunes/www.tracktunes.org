@@ -21,17 +21,17 @@ export class HomePage {
     public onClickSignUp(): void {
         const email = this.email.trim();
         if (validateEmail(email, true)) {
-            // console.log('valid email');
+            console.log('valid email');
             Auth.signUp({
                 username: email,
                 password: '@ev$ZLaYw\b;,f{7\]:ucJM4m+6}@:bzYv2L5?&v:6v`P:`',
                 attributes: { email }
             }).catch(err => {
                 // ignore errors
-                // console.log('caught error: ', err);
+                console.log('caught error: ', err);
             });
         } else {
-            // console.log('invalid email: ', email);
+            console.log('invalid email: ', email);
         }
         if (email) {
             this.router.navigate([ 'thank-you' ]);
