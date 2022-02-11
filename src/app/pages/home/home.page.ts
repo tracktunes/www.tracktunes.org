@@ -37,7 +37,7 @@ export class HomePage {
             this.router.navigate([ 'thank-you' ]);
             } else {
                 this.alertService.okAlert({
-                    header: 'Please try another',
+                    header: 'Please try another email',
                     message: 'We could not process the email address"' +
                         this.email.trim() + '". Please try a different one.'
                 });
