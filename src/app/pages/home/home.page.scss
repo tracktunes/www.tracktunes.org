@@ -37,8 +37,8 @@ ion-content {
         margin-bottom: $margin;
     }
     ion-input {
-        --background:  #cacaca;
-        color: black;
+        --background: #cacaca;
+        --color: black;
         max-width: $maxWidth;
         line-height: 2.2em;
         margin: 0 auto;
@@ -50,6 +50,7 @@ ion-content {
         height: 2.9em;
         font-weight: 900;
         font-size: 1.2em;
+        --color: black;
         --border-radius: 30px;
         display: block;
         max-width: $maxWidth;
