@@ -19,7 +19,7 @@ export class HomePage {
     constructor(private router: Router) {}
 
     public onClickSignUp(): void {
-        const email = this.email.trim();
+        const email = this.email.trim().toLowerCase();
         if (validateEmail(email, true)) {
             // console.log('valid email');
             Auth.signUp({
