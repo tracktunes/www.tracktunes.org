@@ -37,9 +37,9 @@ export class HomePage {
             this.router.navigate([ 'thank-you' ]);
             } else {
                 this.alertService.okAlert({
-                    header: 'Please try another one',
-                    message: 'We were unable to process the email address"' +
-                        this.email.trim() + '"'
+                    header: 'Please try another',
+                    message: 'We could not process the email address"' +
+                        this.email.trim() + '". Please try a different one.'
                 });
             }
         }
