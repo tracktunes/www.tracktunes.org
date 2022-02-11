@@ -25,6 +25,7 @@ const CORRECT_EMAIL_ADDRESSES = [
 ];
 
 const INCORRECT_EMAIL_ADDRESSES = [
+    '',
     'label1@label2@example.org',
     '©®©®©®©®©®@gmail.com',
     'あいうえお@example.org',
