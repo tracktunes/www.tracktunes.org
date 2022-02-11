@@ -19,7 +19,7 @@
       "function": {
         "landing4372ca06PreSignup": {
           "deploymentBucketName": "amplify-landing-dev-154003-deployment",
-          "s3Key": "amplify-builds/landing4372ca06PreSignup-63646b486b706876776d-build.zip"
+          "s3Key": "amplify-builds/landing4372ca06PreSignup-624c466a78755a644570-build.zip"
         }
       }
     }
