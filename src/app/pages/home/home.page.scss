@@ -13,7 +13,7 @@ ion-content {
         font-size: 26px;
     }
     h1, h2 {
-        color: var(--ion-color-dark);
+        color: var(--ion-color-light);
         max-width: $maxWidth;
         margin: 0 auto;
         margin-top: $margin;
@@ -29,7 +29,7 @@ ion-content {
         font-family: 'Blinker';
         font-size: 22px;
         font-weight: 200;
-        color: var(--ion-color-dark);
+        color: var(--ion-color-light);
     }
     ion-img {
         height: 80px;
@@ -37,8 +37,8 @@ ion-content {
         margin-bottom: $margin;
     }
     ion-input {
-        --background: var(--ion-color-step-850);
-        color: var(--ion-color-dark);
+        --background:  #cacaca;
+        color: black;
         max-width: $maxWidth;
         line-height: 2.2em;
         margin: 0 auto;
