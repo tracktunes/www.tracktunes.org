@@ -37,7 +37,7 @@ ion-content {
         margin-bottom: $margin;
     }
     ion-input {
-        --background: #dbdbdb;
+        --background: var(--ion-color-step-850);
         color: black;
         max-width: $maxWidth;
         line-height: 2.2em;
