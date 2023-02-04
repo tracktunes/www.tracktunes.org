@@ -1,0 +1,1 @@
+../../tracktunes-common/scripts/deploy_staging.sh
