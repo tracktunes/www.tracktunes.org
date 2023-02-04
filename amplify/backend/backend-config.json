@@ -1,40 +1,40 @@
 {
   "auth": {
     "landing4372ca06": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
+      "customAuth": false,
       "dependsOn": [
         {
-          "category": "function",
-          "resourceName": "landing4372ca06PreSignup",
-          "triggerProvider": "Cognito",
           "attributes": [
             "Arn",
             "Name"
-          ]
+          ],
+          "category": "function",
+          "resourceName": "landing4372ca06PreSignup",
+          "triggerProvider": "Cognito"
         }
       ],
-      "customAuth": false,
       "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "EMAIL"
-        ],
-        "passwordProtectionSettings": {
-          "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
-        },
         "mfaConfiguration": "OFF",
         "mfaTypes": [
           "SMS"
         ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
         "verificationMechanisms": [
           "EMAIL"
         ]
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
     }
   },
   "function": {
@@ -42,6 +42,24 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_landing4372ca06PreSignup_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "landing4372ca06PreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_landing4372ca06PreSignup_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "landing4372ca06PreSignup"
+        }
+      ]
     }
   }
 }

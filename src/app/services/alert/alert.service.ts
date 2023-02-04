@@ -23,7 +23,7 @@ export class AlertService {
 
     public async okAlert(
         options: AlertOptions,
-        handler: () => void = null
+        handler: () => void = () => {},
     ): Promise<any> {
         options.buttons = [{
             text: 'OK',

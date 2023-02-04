@@ -12,7 +12,7 @@ import { AlertService } from '../../services/alert/alert.service';
     styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-    @ViewChild(IonContent, {read: IonContent, static: false}) content;
+    @ViewChild(IonContent, {read: IonContent, static: false}) private content?: IonContent;
     public showLearnMoreText: boolean = false;
     public showLearnMoreButton: boolean = true;
     public email: string = '';
@@ -30,9 +30,6 @@ export class HomePage {
                     username: email,
                     password: '@ev$ZLaYw\b;,f{7\]:ucJM4m+6}@:bzYv2L5?&v:6v`P:`',
                     attributes: { email }
-                }).catch(err => {
-                    // ignore errors
-                    // console.log('caught error: ', err);
                 });
             this.router.navigate([ 'thank-you' ]);
             } else {
@@ -49,7 +46,9 @@ export class HomePage {
         this.showLearnMoreText = true;
         this.showLearnMoreButton = false;
         setTimeout(() => {
-            this.content.scrollToBottom(500);
+            if (this.content) {
+                this.content.scrollToBottom(500);
+            }
         }, 500);
     }
 }

@@ -1,1 +1,0 @@
-../../tracktunes-common/scripts/lint.sh

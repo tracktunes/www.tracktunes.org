@@ -1,1 +1,0 @@
-../../tracktunes-common/scripts/git_root.sh

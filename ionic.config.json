@@ -1,5 +1,7 @@
 {
-  "name": "sidemenu",
-  "integrations": {},
+  "name": "www.tracktunes.org",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

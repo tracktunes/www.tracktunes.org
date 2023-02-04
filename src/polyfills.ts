@@ -23,8 +23,8 @@
 (window as any).process = { env: { DEBUG: undefined } }; // eslint-disable-line
 
 // IE11 AMPLIFY POLYFILL
-import 'core-js/es/typed-array';
-import 'core-js/es/object';
+// import 'core-js/es/typed-array';
+// import 'core-js/es/object';
 
 /***************************************************************************************************
  * BROWSER POLYFILLS
