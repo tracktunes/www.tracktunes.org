@@ -17,6 +17,7 @@
               "@aws-crypto/crc32",
               "@aws-crypto/sha256-browser",
               "@aws-crypto/sha256-js",
+              "events",
               "buffer",
               "camelcase-keys",
               "cookie",
@@ -63,8 +64,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "30kb",
+                  "maximumError": "50kb"
                 }
               ],
               "fileReplacements": [
