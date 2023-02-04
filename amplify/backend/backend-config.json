@@ -1,6 +1,6 @@
 {
   "auth": {
-    "landing4372ca06": {
+    "landingd18c2d0a": {
       "customAuth": false,
       "dependsOn": [
         {
@@ -9,7 +9,7 @@
             "Name"
           ],
           "category": "function",
-          "resourceName": "landing4372ca06PreSignup",
+          "resourceName": "landingd18c2d0aPreSignup",
           "triggerProvider": "Cognito"
         }
       ],
@@ -30,7 +30,7 @@
           "EMAIL"
         ],
         "verificationMechanisms": [
-          "EMAIL"
+          "PHONE_NUMBER"
         ]
       },
       "providerPlugin": "awscloudformation",
@@ -38,26 +38,26 @@
     }
   },
   "function": {
-    "landing4372ca06PreSignup": {
+    "landingd18c2d0aPreSignup": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_landing4372ca06PreSignup_deploymentBucketName": {
+    "AMPLIFY_function_landingd18c2d0aPreSignup_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "landing4372ca06PreSignup"
+          "resourceName": "landingd18c2d0aPreSignup"
         }
       ]
     },
-    "AMPLIFY_function_landing4372ca06PreSignup_s3Key": {
+    "AMPLIFY_function_landingd18c2d0aPreSignup_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "landing4372ca06PreSignup"
+          "resourceName": "landingd18c2d0aPreSignup"
         }
       ]
     }

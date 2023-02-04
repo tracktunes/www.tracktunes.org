@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.6.15\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.7.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "DOMAINBLACKLIST": {
       "Type": "String",
@@ -71,12 +71,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "landing4372ca06PreSignup",
+            "landingd18c2d0aPreSignup",
             {
               "Fn::Join": [
                 "",
                 [
-                  "landing4372ca06PreSignup",
+                  "landingd18c2d0aPreSignup",
                   "-",
                   {
                     "Ref": "env"
@@ -129,12 +129,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "landing4372ca06PreSignup",
+            "landingd18c2d0aPreSignup",
             {
               "Fn::Join": [
                 "",
                 [
-                  "landing4372ca06PreSignup",
+                  "landingd18c2d0aPreSignup",
                   "-",
                   {
                     "Ref": "env"
@@ -225,17 +225,17 @@
         "Ref": "LambdaExecutionRole"
       }
     },
-    "Region": {
-      "Value": {
-        "Ref": "AWS::Region"
-      }
-    },
     "LambdaExecutionRoleArn": {
       "Value": {
         "Fn::GetAtt": [
           "LambdaExecutionRole",
           "Arn"
         ]
+      }
+    },
+    "Region": {
+      "Value": {
+        "Ref": "AWS::Region"
       }
     }
   }
