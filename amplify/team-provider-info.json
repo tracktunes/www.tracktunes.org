@@ -9,14 +9,18 @@
       "UnauthRoleName": "amplify-landing-dev-125704-unauthRole",
       "StackName": "amplify-landing-dev-125704",
       "StackId": "arn:aws:cloudformation:us-east-1:957560195052:stack/amplify-landing-dev-125704/5613afc0-a4b5-11ed-8480-0a2c266a4f63",
-      "AmplifyAppId": "d2xnnts1vfmjel"
+      "AmplifyAppId": "d2xnnts1vfmjel",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-landing-dev-125704-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
         "landing2ae29bbb": {}
       },
       "function": {
-        "landing2ae29bbbPreSignup": {}
+        "landing2ae29bbbPreSignup": {
+          "deploymentBucketName": "amplify-landing-dev-125704-deployment",
+          "s3Key": "amplify-builds/landing2ae29bbbPreSignup-7555553442354c47786f-build.zip"
+        }
       }
     }
   }
