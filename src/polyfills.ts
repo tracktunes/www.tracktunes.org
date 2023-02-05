@@ -21,6 +21,7 @@
  */
 (window as any).global = window;
 (window as any).process = { env: { DEBUG: undefined } }; // eslint-disable-line
+(window as any).tracktunesVersion = '0.0.37';
 
 // IE11 AMPLIFY POLYFILL
 // import 'core-js/es/typed-array';
